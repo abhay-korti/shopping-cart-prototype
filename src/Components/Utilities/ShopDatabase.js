@@ -134,7 +134,7 @@ export default function smallDatabase(){
     return shopData;
 }
 
-export function searchDatabase(invoiceID){
-    return shopData.find(element => element.itemID === invoiceID)
+export function searchDatabase(invoiceId){
+    return shopData.find(element => element.itemId === invoiceId)
 
 }

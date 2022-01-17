@@ -1,5 +1,5 @@
 import React, {useRef,useState} from 'react'
-import {Outlet, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import uuid  from 'react-uuid';
 
 
@@ -26,7 +26,9 @@ const Navbar = (props) => {
                     </div>
                     <div key={uuid()}>
                         <button className='popupcart-buttons' onClick={() => props.addToCart(item.product)}>+</button>
-                        {item.quantity}
+                        <div>
+                            {item.quantity}
+                         </div>
                         <button className='popupcart-buttons' onClick={() => props.delFromCart(item.product.itemId)}>-</button>
                     </div>
                     {/* <div key={uuid()}>
@@ -39,7 +41,14 @@ const Navbar = (props) => {
                 )
             }
          )
-         return publishArray;
+         let popupReturnValue = 
+         <div>
+             { props.cart.length > 0 ? <div>Proceed To Checkout</div> : ""}
+             <div>
+                 {publishArray}
+             </div>
+         </div>
+         return popupReturnValue;
     }
 
 return(
@@ -56,21 +65,21 @@ return(
                     <li>
                         <Link to="/shop">Shop</Link>
                     </li>
-                    <li onClick={(event) => {
-                        if(popupDisplayStatus){
-                            popupRef.current.style.display = 'none';
-                            setPopUpDisplayStatus(false)
-                        }
-                        else{
-                            popupRef.current.style.display = 'flex';
-                            setPopUpDisplayStatus(true);
-                        }
-                    }}>
-                    Cart {`(${getQuantity()})`}
-                    <div ref={popupRef} className='popup-cart' onClick={(event) => event.stopPropagation()}>
-                        {cartPopup()}    
-                    </div> 
-                    </li>
+                        <li onClick={(event) => {
+                            if(popupDisplayStatus){
+                                popupRef.current.style.display = 'none';
+                                setPopUpDisplayStatus(false)
+                            }
+                            else{
+                                popupRef.current.style.display = 'flex';
+                                setPopUpDisplayStatus(true);
+                            }
+                        }} className='popupcart-parent'>
+                        Cart {`(${getQuantity()})`}
+                        <div ref={popupRef} className='popup-cart' onClick={(event) => event.stopPropagation()}>
+                            {cartPopup()}    
+                        </div> 
+                        </li>
                     <li>
                         <Link to="/contact">Contact</Link>
                     </li>

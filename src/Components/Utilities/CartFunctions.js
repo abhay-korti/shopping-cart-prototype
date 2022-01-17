@@ -45,17 +45,14 @@ const delFunc = (currentState,itemId) => {
 
 
 const cartQuantity = (currentCart, product, addingFunc, dellingFunc) => {
-        console.log(currentCart.cart);
-        console.log(product);
         for(let i=0;i<currentCart.cart.length;i++){
             if(product.itemId == currentCart.cart[i].product.itemId){
                 if(currentCart.cart[i].quantity > 0){
                     return(
                         <div>
-                            
-                            <button onClick={() => addingFunc(product.itemId)}>-</button>
+                            <button onClick={() => dellingFunc(product.itemId)}>-</button>
                             <span>{currentCart.cart[i].quantity}</span>
-                            <button onClick={() => dellingFunc(product)}>+</button>
+                            <button onClick={() => addingFunc(product)}>+</button>  
                         </div>
                     )
                 }
@@ -63,7 +60,7 @@ const cartQuantity = (currentCart, product, addingFunc, dellingFunc) => {
         }
 
          return(
-            <div onClick={() => addFunc(currentCart,product)}>
+            <div onClick={() => addingFunc(product)}>
                  ADD TO CART
             </div>
        )

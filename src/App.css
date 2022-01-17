@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -49,11 +50,12 @@ a {
 .popup-cart {
   position: absolute;
   display: none;
-  width: 200px;
+  width: 400px;
   height: 300px;
   background-color: rgba(0, 0, 0, 0.4);
   flex-flow: column nowrap;
   overflow: auto;
+  margin-top: 32px;
 }
 
 .popupcart-listitem {
@@ -67,4 +69,10 @@ a {
   display: block;
   height: 20px;
   width: 30px;
+}
+
+.popupcart-parent {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
