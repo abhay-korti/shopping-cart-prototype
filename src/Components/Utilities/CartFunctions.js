@@ -1,5 +1,6 @@
 const addFunc = (currentState, item) => {
     console.log('In add func');
+    console.log(item);
     let copyArr = currentState.cart;
     for(let i=0;i<copyArr.length;i++){
       if(item.itemId == copyArr[i].product.itemId){

@@ -45,3 +45,26 @@ a {
 .active-category {
   background: rgba(0, 0, 0, 0.3);
 }
+
+.popup-cart {
+  position: absolute;
+  display: none;
+  width: 200px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-flow: column nowrap;
+  overflow: auto;
+}
+
+.popupcart-listitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+
+.popupcart-buttons {
+  display: block;
+  height: 20px;
+  width: 30px;
+}

@@ -27,8 +27,6 @@ const Shop = (props) => {
     }
 
     const cartQuantity = (currentCart, product,) => {
-        console.log(currentCart.cart);
-        console.log(product);
         for(let i=0;i<currentCart.cart.length;i++){
             if(product.itemId == currentCart.cart[i].product.itemId){
                 if(currentCart.cart[i].quantity > 0){

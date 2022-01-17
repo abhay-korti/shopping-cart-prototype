@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div className="App">
-      <Navbar cart={this.state.cart}/>
+      <Navbar cart={this.state.cart} addToCart={this.addToCart} delFromCart={this.delFromCart}/>
       <Routes>
           <Route path= "/" element={<Home/>}/>
           <Route path= "shop" element={<Shop currentCart={this.state} addToCart={this.addToCart} delFromCart={this.delFromCart}/>} />
