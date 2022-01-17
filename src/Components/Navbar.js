@@ -3,7 +3,7 @@ import {Outlet, Link} from 'react-router-dom'
 
 
 const Navbar = (props) => {
-
+    console.log('re-rendering nav');
     const getQuantity = () => {
         let quant=0;
         if(props.cart.length >0){
@@ -14,8 +14,8 @@ const Navbar = (props) => {
         return quant 
     } 
 
-    return(
-        <div>
+return(
+    <div>
         <div className='navbar'>
             <div className='logo'>
                 Logo
@@ -31,14 +31,15 @@ const Navbar = (props) => {
                     <li>
                         <Link to="/contact">Contact</Link>
                     </li>
-                    <li>
-                        <Link to="/cart">Cart {`(${getQuantity()})`} </Link>
+                    <li onClick={(event) => console.log('test')}>
+                        Cart {`(${getQuantity()})`}
+                    <div className='cart-popup'> 
+                        </div> 
                     </li>
-                </ul>
-            </nav>
+                 </ul>
+           </nav>
         </div>
-            <Outlet/>
-            </div>
-    )
+ </div> 
+ )
 }
 export default Navbar

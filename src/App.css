@@ -32,3 +32,16 @@ a {
   text-decoration: none;
   color: purple;
 }
+
+.category-container {
+  width: 50px;
+  height: 50px;
+}
+
+.category-container:hover {
+  background: blue;
+}
+
+.active-category {
+  background: rgba(0, 0, 0, 0.3);
+}

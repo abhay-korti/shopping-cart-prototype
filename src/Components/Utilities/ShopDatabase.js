@@ -1,6 +1,7 @@
 const shopData = [
     {
     itemId: 'P00001',
+    category:'one',
     name:'Tooth Brush',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -8,6 +9,7 @@ const shopData = [
     },
     {
     itemId: 'P00002',
+    category:'one',
     name:'Mobile Charger',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -15,6 +17,7 @@ const shopData = [
     },
     {
     itemId: 'P00003',
+    category:'one',
     name:'Telephone',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -22,6 +25,7 @@ const shopData = [
     },
     {
     itemId: 'P00004',
+    category:'one',
     name:'Cable',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -29,6 +33,7 @@ const shopData = [
     },
     {
     itemId: 'P00005',
+    category:'one',
     name:'Table',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -36,6 +41,7 @@ const shopData = [
     },
     {
     itemId: 'P00006',
+    category:'two',
     name:'Chair',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -43,6 +49,7 @@ const shopData = [
     },
     {
     itemId: 'P00007',
+    category:'two',
     name:'Filler',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -50,6 +57,7 @@ const shopData = [
     },
     {
     itemId: 'P00008',
+    category:'two',
     name:'Refill',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -57,6 +65,7 @@ const shopData = [
     },
     {
     itemId: 'P00009',
+    category:'four',
     name:'Xylophone',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -64,6 +73,7 @@ const shopData = [
     },
     {
     itemId: 'P00010',
+    category:'one',
     name:'Hat',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -71,6 +81,7 @@ const shopData = [
     },
     {
     itemId: 'P00011',
+    category:'three',
     name:'Book',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -78,6 +89,7 @@ const shopData = [
     },
     {
     itemId: 'P00012',
+    category:'three',
     name:'Waterskin',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -85,6 +97,7 @@ const shopData = [
     },
     {
     itemId: 'P00013',
+    category:'four',
     name:'Yatch',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -92,6 +105,7 @@ const shopData = [
     },
     {
     itemId: 'P00014',
+    category:'four',
     name:'Takis',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -99,6 +113,7 @@ const shopData = [
     },
     {
     itemId: 'P00015',
+    category:'two',
     name:'Desk',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
@@ -106,6 +121,7 @@ const shopData = [
     },
     {
     itemId: 'P00016',
+    category:'three',
     name:'Gate',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
     img_source: "Enter link here",
