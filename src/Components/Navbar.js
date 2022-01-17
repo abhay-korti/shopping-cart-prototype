@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Outlet, Link} from 'react-router-dom'
 
 
 const Navbar = (props) => {
@@ -15,6 +15,7 @@ const Navbar = (props) => {
     } 
 
     return(
+        <div>
         <div className='navbar'>
             <div className='logo'>
                 Logo
@@ -22,7 +23,7 @@ const Navbar = (props) => {
             <nav className='navbar-content'>
                 <ul className='navbar-elements'>
                     <li>
-                        <Link to="/home">Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
                         <Link to="/shop">Shop</Link>
@@ -36,6 +37,8 @@ const Navbar = (props) => {
                 </ul>
             </nav>
         </div>
+            <Outlet/>
+            </div>
     )
 }
 export default Navbar
