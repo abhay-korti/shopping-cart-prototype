@@ -3,12 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --product-page-size: 600px;
+}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   height: 10vh;
-  background: rgb(236, 164, 164);
+  background: rgba(236, 164, 164, 0.3);
 }
 
 .navbar-elements {
@@ -21,7 +24,7 @@
 }
 
 .navbar-content {
-  width: 30%;
+  width: 70%;
   height: 100%;
 }
 
@@ -48,6 +51,7 @@ a {
 }
 
 .popup-cart {
+  top: 88px;
   position: absolute;
   display: none;
   width: 400px;
@@ -55,7 +59,20 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
   flex-flow: column nowrap;
   overflow: auto;
-  margin-top: 32px;
+}
+
+.cartpopup-traingle {
+  top: 60px;
+  position: absolute;
+  align-self: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 28px rgba(0, 0, 0, 0.3) solid;
+  border-right: 28px transparent solid;
+  border-left: 28px transparent solid;
+  width: 0;
+  height: 0;
 }
 
 .popupcart-listitem {
@@ -71,8 +88,68 @@ a {
   width: 30px;
 }
 
-.popupcart-parent {
+.popup-container {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
+}
+
+.popupcart-parent {
+  /* display: flex;
+  flex-flow: column nowrap;
+  align-items: center; */
+}
+
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkout-paybutton {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.test {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.productpage-totalcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 24px;
+}
+
+.productpage-imagecontainer {
+  border: 3px solid black;
+}
+
+.productpage-image {
+  width: var(--product-page-size);
+  height: 700px;
+}
+
+.productpage-infocontainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: var(--product-page-size);
+  height: calc(var(--product-page-size) + 100px);
+}
+
+.productpage-name {
+  font-size: 64px;
+  text-align: center;
+  text-decoration: underline;
+}
+.productpage-desc {
+  font-size: 32px;
+  align-self: flex-start;
 }

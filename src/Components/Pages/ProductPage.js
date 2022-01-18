@@ -7,29 +7,29 @@ import { useParams } from "react-router-dom";
 const ProductPage =  (props) => {
     let params = useParams();
     let product = searchDatabase(params.productId);
-    console.log(product);
     return(
     <div>
-        <div>
-        {// Image Source}
-}
+    <div className="productpage-totalcontainer">
+        <div className="productpage-imagecontainer">
+            <img src={product.img_source} alt={product.name} className="productpage-image"></img>
         </div>
-        <div>
-            <div>
+        <div className="productpage-infocontainer">
+            <div className="productpage-name">
                 <h2>
                     {product.name}
                 </h2>
             </div>
-            <div>
-                {product.desc}
+                <div className="productpage-desc">
+                    {product.desc}
+                </div>
+            <div className=" productpage-desc productpage-price">
+                Price: {`$${product.price}`}
             </div>
-            <div>
-                {product.price}
-            </div>
-            <div>
+            <div className="productpage-cartQ">
                 {cartQuantity(props.currentCart,product,props.addToCart,props.delFromCart)}
             </div>
         </div>
+    </div>
     </div>
     )
 

@@ -10,6 +10,7 @@ import Home from './Components/Pages/Home';
 import Shop from './Components/Pages/Shop';
 import ProductPage from './Components/Pages/ProductPage';
 import PageNotFound from './Components/Pages/PageNotFound';
+import Checkout from './Components/Pages/Checkout'
 import { addFunc,delFunc } from './Components/Utilities/CartFunctions';
 
 class App extends Component {
@@ -42,7 +43,7 @@ class App extends Component {
           <Route path= "/" element={<Home/>}/>
           <Route path= "shop" element={<Shop currentCart={this.state} addToCart={this.addToCart} delFromCart={this.delFromCart}/>} />
           <Route path="shop/:productId" element={<ProductPage currentCart={this.state} addToCart={this.addToCart} delFromCart={this.delFromCart}/>}/>
-            {/* <Route path= "/checkout" element={<Checkout/>}/> */}
+            <Route path= "/checkout" element={<Checkout currentCart={this.state} addToCart={this.addToCart} delFromCart={this.delFromCart}/>}/>
           <Route path="*" element={<PageNotFound/>}/>
       </Routes>
       </div>

@@ -4,7 +4,7 @@ const shopData = [
     category:'one',
     name:'Tooth Brush',
     desc: 'The range of elements processed by map is set before the first invocation of callbackFn. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by callbackFn. ',
-    img_source: "Enter link here",
+    img_source: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2503522/2019/5/11/0690d08e-829c-4876-82a5-98421d48d3791557550179671-Roadster-Men-Teal-Regular-Fit-Solid-Casual-Shirt-47815575501-1.jpg",
     price:400
     },
     {

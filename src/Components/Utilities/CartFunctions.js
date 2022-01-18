@@ -4,7 +4,7 @@ const addFunc = (currentState, item) => {
     let copyArr = currentState.cart;
     for(let i=0;i<copyArr.length;i++){
       if(item.itemId == copyArr[i].product.itemId){
-        console.log(copyArr[i].product.itemId);
+        console.log(copyArr);
            copyArr[i].quantity += 1;
            return {
                ...currentState,
@@ -43,7 +43,6 @@ const delFunc = (currentState,itemId) => {
 
 }
 
-
 const cartQuantity = (currentCart, product, addingFunc, dellingFunc) => {
         for(let i=0;i<currentCart.cart.length;i++){
             if(product.itemId == currentCart.cart[i].product.itemId){
@@ -66,8 +65,24 @@ const cartQuantity = (currentCart, product, addingFunc, dellingFunc) => {
        )
 }
 
+const removeFromCart = (currentState,itemId) => {
+    let copyArr = currentState.cart;
+    for(let i=0;i<copyArr.length;i++){
+      if(copyArr[i].product.itemId == itemId){
+        copyArr.splice(i, 1);
+        break;
+      }
+}
+    return {
+        ...currentState,
+        'cart':copyArr
+    };
+}
+
+
 
 export {
+    removeFromCart,
     cartQuantity,
     addFunc,
     delFunc
