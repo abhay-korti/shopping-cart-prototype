@@ -23,15 +23,16 @@ const Navbar = (props) => {
                 return(
                 <div className ={'popupcart-listitem'} key={uuid()}>
                     <div>
-                        <div>
-                            {//Image Source
+                        <div className='popupcart-imagecontainer'>
+                            {
+                                <img src={item.product.img_source_one} alt={item.product.name} className='popupcart-image'></img>
                             }
                         </div>
                     </div>
                     <div  key={uuid()}>
-                        {item.product.name}
+                        <strong>{item.product.name}</strong>
                     </div>
-                    <div key={uuid()}>
+                    <div key={uuid()} className='popup-buttoncontainer'>
                         <button className='popupcart-buttons' onClick={() => props.addToCart(item.product)}>+</button>
                         <div>
                             {item.quantity}
@@ -46,7 +47,8 @@ const Navbar = (props) => {
          <div>
              { props.cart.length > 0 ? <div onClick={() => {
                  popupRef.current.style.display = 'none';
-                setPopUpDisplayStatus(false)}}><Link to="checkout">Proceed To Checkout</Link></div> : ""}
+                 triangleRef.current.style.display = 'none';
+                setPopUpDisplayStatus(false)}} className='checkout-button'><Link to="checkout">Proceed To Checkout</Link></div> : ""}
              <div>
                  {publishArray}
              </div>

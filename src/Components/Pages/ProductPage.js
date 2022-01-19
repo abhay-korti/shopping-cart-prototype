@@ -11,7 +11,7 @@ const ProductPage =  (props) => {
     <div>
     <div className="productpage-totalcontainer">
         <div className="productpage-imagecontainer">
-            <img src={product.img_source} alt={product.name} className="productpage-image"></img>
+            <img src={product.img_source_one} alt={product.name} className="productpage-image"></img>
         </div>
         <div className="productpage-infocontainer">
             <div className="productpage-name">
@@ -19,9 +19,15 @@ const ProductPage =  (props) => {
                     {product.name}
                 </h2>
             </div>
-                <div className="productpage-desc">
+            <div className="productpage-desc">
                     {product.desc}
-                </div>
+            </div>
+            <div className="productpage-desc">
+                <strong>Size and Fit:</strong> {product.s_f}
+            </div>
+            <div className="productpage-desc">
+                Machine Care : {product.m_c}
+            </div>
             <div className=" productpage-desc productpage-price">
                 Price: {`$${product.price}`}
             </div>

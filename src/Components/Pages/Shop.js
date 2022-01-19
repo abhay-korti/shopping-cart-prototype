@@ -8,7 +8,7 @@ const Shop = (props) => {
     console.log(props);
 
     const allData = smallDatabase();
-    const [activeCategory, setActiveCategory] = useState('one');
+    const [activeCategory, setActiveCategory] = useState('all');
 
         function categoryDisplay(){
             let categoryContainer = [];
@@ -26,62 +26,42 @@ const Shop = (props) => {
         return categoryJSX
     }
 
-    const cartQuantity = (currentCart, product,) => {
-        for(let i=0;i<currentCart.cart.length;i++){
-            if(product.itemId == currentCart.cart[i].product.itemId){
-                if(currentCart.cart[i].quantity > 0){
-                    return(
-                        <div>
-                            
-                            <button onClick={() => props.delFromCart(product.itemId)}>-</button>
-                            <span>{currentCart.cart[i].quantity}</span>
-                            <button onClick={() => props.addToCart(product)}>+</button>
-                        </div>
-                    )
-                }
-            }
-        }
-         return(
-            <div onClick={() => props.addToCart(product)}>
-                 ADD TO CART
-            </div>
-       )
-}
-
-
-
-
-
     return(
         <div>
-            <div className='testbox123'>
-                <h2>Categories</h2>
-            </div>
-            {
-                categoryDisplay()
-            }
-        <div>
-            {
-             allData.map((element,index) => {
-                 if(activeCategory == element.category){
-                 return(
-                     <div key={element.itemId}>
-                         <div>
-                             <Link to={`/shop/${element.itemId}`}>{element.name}</Link>
-                        </div>
-                        <div>
-                            {element.price}
-                        </div>
-                        <div>
-                            {
-                                cartQuantity(props.currentCart,element)     
-                            }
-                        </div>
-                     </div>
-                 )
+
+            <h1>Categories</h1>
+            <div className='shop-totalcontainer'>
+                <div className='total-categorycontainer'>
+                {
+                    categoryDisplay()
                 }
-             })   
-            }
+                </div>
+            <div className='shop-totalitemcontainer'>
+                {
+                allData.map((element,index) => {
+                    if(activeCategory=='all' || activeCategory == element.category){
+                    return(
+                        <div key={element.itemId} className='shop-itemcontainer'>
+                            <div>
+                                <img src={element.img_source_one} alt={element.name} className='shop-imagecontainer'></img>
+                            </div>
+                            <div>
+                                <Link to={`/shop/${element.itemId}`}>{element.name}</Link>
+                            </div>
+                            <div>
+                                {element.price}
+                            </div>
+                            <div className='quantity-holder-display'>
+                                {
+                                    cartQuantity(props.currentCart,element,props.addToCart,props.delFromCart)
+                                }
+                            </div>
+                        </div>
+                    )
+                    }
+                })   
+                }
+            </div>
         </div>
     </div>
     )
