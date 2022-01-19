@@ -26,7 +26,7 @@ const shopData = [
     desc: 'Navy Blue striped casual shirt, has a mandarin collar, long sleeves, button placket, and curved hem',
     's_f':'Slim fit',
     'm_c':'100% cotton | Machine-wash',
-    img_source_one: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/11361160/2020/2/24/6e48c2a4-5d44-48a1-9e89-ef45e60a6a671582535979796-WROGN-Men-SHIRTS-6061582535978238-1.jpg",
+    img_source_one: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11361160/2020/2/24/6e48c2a4-5d44-48a1-9e89-ef45e60a6a671582535979796-WROGN-Men-Shirts-6061582535978238-1.jpg",
     price:900
     },
     {
@@ -102,21 +102,21 @@ const shopData = [
     {
     itemId: 'P00011',
     category:'SHOES',
-    name:'Book',
-    desc: 'Teal blue solid casual shirt, has a spread collar, long sleeves, curved hem, one patch pocket',
-    's_f':'Regular Fit',
-    'm_c':'100% cotton | Machine-wash',
-    img_source_one: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/productimage/2020/12/2/260e8814-c28f-41ac-abfe-af7cb00db2691606898832837-1.jpg",
+    name:'USP Men White Sneakers',
+    desc: 'A pair of round-toe white sneakers, has regular styling, lace-up detail',
+    's_f':'Regular Fit | Size: 6 | 7 | 8 | 9 | 10',
+    'm_c':'',
+    img_source_one: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10339033/2019/8/6/df9a712b-a5fc-4a65-870a-0854fb50ea221565093150139-US-Polo-Assn-Men-Casual-Shoes-7391565093148433-1.jpg",
     price:150
     },
     {
     itemId: 'P00012',
     category:'SHOES',
-    name:'Waterskin',
-    desc: 'Teal blue solid casual shirt, has a spread collar, long sleeves, curved hem, one patch pocket',
-    's_f':'Regular Fit',
-    'm_c':'100% cotton | Machine-wash',
-    img_source_one: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/productimage/2020/12/2/260e8814-c28f-41ac-abfe-af7cb00db2691606898832837-1.jpg",
+    name:'HRX Black Mid Top',
+    desc: 'A pair of round-toe black sneakers, has mid-top styling, lace-up detail',
+    's_f':'Regular Fit | Size: 6 | 7 | 8 | 9 | 10',
+    'm_c':'Canvas | Wipe with a clean, dry cloth to remove dust',
+    img_source_one: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/11730492/2021/3/12/f59b647b-41e1-4cd6-838f-cfffb47c73d01615544117207HRXbyHrithikRoshanMenBlackSolidMid-TopSneakers1.jpg",
     price:1050
     },
     {
@@ -134,9 +134,9 @@ const shopData = [
     category:'HOODIES',
     name:'Avengers Hoodie',
     desc: 'Black printed sweatshirt, has a hood, long sleeves, straight hem',
-    's_f':'Regular Fit',
-    'm_c':'100% cotton | Machine-wash',
-    img_source_one: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2175460/2017/10/30/11509359669996-Kook-N-Keech-Marvel-Men-SweatSHIRTS-4391509359669829-1.jpg",
+    's_f':'Regular Fit | Size: 6 | 7 | 8 | 9 | 10',
+    'm_c':'Synthetic | Wipe with a clean, dry cloth to remove dust',
+    img_source_one: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2175460/2017/10/30/11509359669996-Kook-N-Keech-Marvel-Men-Sweatshirts-4391509359669829-1.jpg",
     price:100
     },
     {
@@ -152,11 +152,11 @@ const shopData = [
     {
     itemId: 'P00016',
     category:'SHOES',
-    name:'Gate',
-    desc: 'Teal blue solid casual shirt, has a spread collar, long sleeves, curved hem, one patch pocket',
+    name:'AfroJack - ColorBlocked',
+    desc: 'A pair of round-toe black, white and red colourblocked sneakers',
     's_f':'Regular Fit',
     'm_c':'100% cotton | Machine-wash',
-    img_source_one: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/productimage/2020/12/2/260e8814-c28f-41ac-abfe-af7cb00db2691606898832837-1.jpg",
+    img_source_one: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13598562/2021/12/7/b81b6b58-25ca-424c-8f94-fea65489cb371638861817841AfroJackMenBlackWhiteColourblockedSneakers5.jpg",
     price:550
     },
 

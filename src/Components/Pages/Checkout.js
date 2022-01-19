@@ -15,32 +15,35 @@ const Checkout = (props) => {
     const cartPopup = () => {
         let publishArray = props.currentCart.cart.map((item,index) => {
             return(
-        <div>
-            <div className ={'popupcart-listitem'} key={uuid()}>
-                <div  key={uuid()}>
+        <div className='checkout-totaldiv'>
+            <div className ={'checkout-item'} key={uuid()}>
+                <div className="checkout-imagecontainer">
+                    <img src={item.product.img_source_one} alt={item.product.name} className="checkout-image"></img>
+                </div>
+                <div  key={uuid()} className='checkout-name'>
                     {item.product.name}
                 </div>
-                <div key={uuid()}>
+                <div key={uuid()} className='checkout-quant'>
                     <button className='popupcart-buttons' onClick={() => props.addToCart(item.product)}>+</button>
                     <div>
                         {item.quantity}
                      </div>
                     <button className='popupcart-buttons' onClick={() => props.delFromCart(item.product.itemId)}>-</button>
                 </div>
-                <div key={uuid()}>
+                <div key={uuid()} className='checkout-price'>
                     {item.product.price}
                 </div>
-                <div key={uuid()}>
+                <div key={uuid()} className='checkout-totalprice'>
                     {item.product.price * item.quantity}
                 </div>
-            </div>
-                <div>
+                </div>
+                <>
                 {
                     index==props.currentCart.cart.length -1 
                     ?
-                    <div>
+                    <div className='checkout-end'>
                         <div className='cart-total'>
-                            {totalCostCalc()}
+                            {`Your total is ${totalCostCalc()}`}
                         </div>
                         <div className='checkout-paybutton'>
                             <button>Click Here to Pay</button>
@@ -48,7 +51,8 @@ const Checkout = (props) => {
                     </div>
                     :null
                 }
-                </div>
+                </>
+
 
         </div>
             )
@@ -59,13 +63,13 @@ const Checkout = (props) => {
 }
     console.log(props);
     return(
-        <div>
+        <div className='checkout-background'>
             <div>
                 <h1>Checkout Page</h1>
             </div>
             <div>
                 {
-                    <div>
+                    <div className='checkout-totalcontainer'>
                         {cartPopup()}
                     </div>
                 

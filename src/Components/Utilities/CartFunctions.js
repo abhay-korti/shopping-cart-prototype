@@ -50,7 +50,7 @@ const cartQuantity = (currentCart, product, addingFunc, dellingFunc) => {
                     return(
                         <div className="quantity-container">
                             <button onClick={() => dellingFunc(product.itemId)} className="quantity-holder-buttons">-</button>
-                            <span className="quantity-holder-display">{currentCart.cart[i].quantity}</span>
+                            <span className="quantity-holder-number">{currentCart.cart[i].quantity}</span>
                             <button onClick={() => addingFunc(product)} className="quantity-holder-buttons">+</button>  
                         </div>
                     )
@@ -59,7 +59,7 @@ const cartQuantity = (currentCart, product, addingFunc, dellingFunc) => {
         }
 
          return(
-            <div onClick={() => addingFunc(product)} className="quantity-holder-display">
+            <div onClick={() => addingFunc(product)} className="quantity-holder-cart">
                  ADD TO CART
             </div>
        )

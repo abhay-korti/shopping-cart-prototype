@@ -27,7 +27,7 @@ const Shop = (props) => {
     }
 
     return(
-        <div>
+        <div className='shop-background'>
 
             <h1>Categories</h1>
             <div className='shop-totalcontainer'>
@@ -45,13 +45,13 @@ const Shop = (props) => {
                             <div className='shop-imagecontainer'>
                                 <img src={element.img_source_one} alt={element.name} className='shop-image'></img>
                             </div>
-                            <div>
+                            <div className="shop-itemname">
                                 <Link to={`/shop/${element.itemId}`}>{element.name}</Link>
                             </div>
-                            <div>
+                            <div className="shop-itemprice">
                                 {`$${element.price}`}
                             </div>
-                            <div className='quantity-holder-display'>
+                            <div className='quantity-holder-total'>
                                 {
                                     cartQuantity(props.currentCart,element,props.addToCart,props.delFromCart)
                                 }

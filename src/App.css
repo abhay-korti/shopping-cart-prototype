@@ -11,11 +11,15 @@
   --product-page-size: 600px;
 }
 
+body {
+  background: white;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   height: 10vh;
-  background: rgba(236, 164, 164, 0.3);
+  background: rgba(236, 164, 164, 1);
 }
 
 .navbar-elements {
@@ -95,14 +99,6 @@ a {
 
 li.popupcart-parent:hover {
   cursor: pointer;
-  /* display: flex;
-  flex-flow: column nowrap;
-  align-items: center; */
-}
-
-.cart-total {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .popupcart-image {
@@ -134,13 +130,6 @@ li.popupcart-parent:hover {
   width: 100%;
   height: 4%;
   font-size: 10px;
-}
-
-.checkout-paybutton {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  position: relative;
 }
 
 .popup-buttoncontainer {
@@ -198,12 +187,13 @@ li.popupcart-parent:hover {
 }
 
 .productpage-cartQ {
+  background: rgba(236, 164, 164, 0.9);
   width: inherit;
-  height: 50px;
 }
 
 .quantity-container {
   display: flex;
+  height: 100%;
 }
 
 .quantity-holder {
@@ -211,21 +201,47 @@ li.popupcart-parent:hover {
   width: inherit;
   display: flex;
 }
+
+.popup-cartquant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 13%;
+  top: 1%;
+  background: black;
+  color: white;
+  border-radius: 50%;
+}
+
 .quantity-holder-number {
   color: purple;
   background: rgba(236, 164, 164, 0.9);
   width: 50%;
   text-align: center;
   border: 2px black solid;
-  border-radius: 7%;
+  height: inherit;
 }
 
-.quantity-holder-display {
+.quantity-holder-buttons:hover {
+  cursor: pointer;
+}
+
+.quantity-holder-display,
+.quantity-holder-total {
+  font-size: 24px;
   color: purple;
   background: rgba(236, 164, 164, 0.9);
   font-size: 20px;
   width: 100%;
+  height: 10%;
   text-align: center;
+}
+
+.quantity-holder-total {
+  height: 10%;
 }
 
 .quantity-holder-display:hover {
@@ -233,11 +249,17 @@ li.popupcart-parent:hover {
 }
 
 .quantity-holder-buttons {
-  border: none;
-  border-radius: 25%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: none;
+  border-bottom: none;
   background: none;
   width: 25%;
-  height: 5%;
+}
+
+.quantity-holder-cart {
+  text-align: center;
+  font-size: 24px;
 }
 
 .shop-totalcontainer {
@@ -257,6 +279,7 @@ li.popupcart-parent:hover {
 }
 
 .category-container {
+  background: rgba(200, 200, 200, 1);
   margin: 8px;
   border: 1px solid black;
   padding: 8px;
@@ -288,23 +311,35 @@ li.popupcart-parent:hover {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 410px;
   border: 1px solid black;
   margin: 8px;
+  background: rgba(200, 200, 200, 1);
 }
 
 .shop-imagecontainer {
-  border: 1px black solid;
-  width: 340px;
-  height: 290px;
-  margin-top: 2px;
+  width: 170px;
+  height: 210px;
+  margin-top: 4px;
 }
 
 .shop-image {
   border: 1px black solid;
-  width: 340px;
-  height: 290px;
+  width: 170px;
+  height: 410x;
+}
+
+.shop-background {
+  background: white;
+}
+.shop-itemname {
+  font-size: 38px;
+  font-weight: 700;
+  text-decoration: rgb(107, 1, 107) underline;
+}
+.shop-itemprice {
+  font-size: 20px;
 }
 
 .checkout-button {
@@ -322,4 +357,78 @@ li.popupcart-parent:hover {
 
 .checkout-button:hover {
   cursor: pointer;
+}
+
+.checkout-totalcontainer {
+  background: rgba(236, 164, 164, 0.3);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.checkout-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkout-image {
+  width: 200px;
+  height: 200px;
+}
+
+.checkout-imagecontainer,
+.checkout-name,
+.checkout-quant,
+.checkout-price,
+.checkout-totalprice {
+}
+
+.checkout-imagecontainer {
+  margin: 8px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout-totaldiv {
+  height: 100%;
+  width: 100%;
+}
+
+.checkout-paybutton {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.cart-total {
+  align-self: flex-end;
+}
+
+.checkout-end {
+  display: flex;
+  flex-flow: column nowrap;
+  width: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-background {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: rgba(236, 164, 164, 1);
+  font-size: 56px;
+  background-image: url("https://thumbs.gfycat.com/GiddyPopularBluewhale-size_restricted.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: inherit;
+  min-height: 800px;
 }

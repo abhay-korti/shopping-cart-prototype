@@ -63,7 +63,7 @@ return(
     <div>
         <div className='navbar'>
             <div className='logo'>
-                Logo
+                UNIQLO
             </div>
             <nav className='navbar-content'>
                 <ul className='navbar-elements'>
@@ -76,9 +76,6 @@ return(
                     <div className='test'>
                         <li>
                             <div className='popup-container'>
-                                <div>
-                                    {getQuantity()}
-                                </div>
                                 <div onClick={(event) => {
                                     if(popupDisplayStatus){
                                         popupRef.current.style.display = 'none';
@@ -91,7 +88,7 @@ return(
                                         setPopUpDisplayStatus(true);
                                     }}}className='popup-parent'>
                                         Cart
-                                </div> 
+                                </div>
                             </div>
                         </li>
                         <div ref={triangleRef} className='cartpopup-traingle'></div>
@@ -99,37 +96,14 @@ return(
                             {cartPopup()}
                         </div>      
                     </div>
+                    <div className='popup-cartquant'>
+                                    {getQuantity()}
+                                </div>
                  </ul>
            </nav>
-
         </div>
  </div> 
 
  )
 }
 export default Navbar
-
-
-{/* <div onClick={(event) => {
-    if(popupDisplayStatus){
-        popupRef.current.style.display = 'none';
-        setPopUpDisplayStatus(false)
-    }
-    else{
-        popupRef.current.style.display = 'flex';
-        setPopUpDisplayStatus(true);
-    }
-}} className='popupcart-parent'>
-    Cart {`(${getQuantity()})`}
-    <div ref={popupRef} className='popup-cart' onClick={(event) => event.stopPropagation()}>
-        <div className='cartpopup-traingle'>
-            {cartPopup()}                        
-        </div> 
-    </div>  
-</div> */}
-
-                            {/* 
-                            <div className='cartpopup-traingle'></div>
-                            <div ref={popupRef} className='popup-cart' onClick={(event) => event.stopPropagation()}>
-                                {cartPopup()}                        
-                            </div>  */}
