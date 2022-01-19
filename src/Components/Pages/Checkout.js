@@ -1,5 +1,4 @@
 import React from 'react';
-import {cartQuantity} from '../Utilities/CartFunctions' 
 import uuid from 'react-uuid'
 
 const Checkout = (props) => {
@@ -22,6 +21,10 @@ const Checkout = (props) => {
                 </div>
                 <div  key={uuid()} className='checkout-name'>
                     {item.product.name}
+                    <div className='checkout-listitem-splice' onClick={() => {
+                            props.remFromCart(item.product.itemId);
+                        }}>Remove from Cart
+                </div>
                 </div>
                 <div key={uuid()} className='checkout-quant'>
                     <button className='popupcart-buttons' onClick={() => props.addToCart(item.product)}>+</button>
@@ -61,7 +64,6 @@ const Checkout = (props) => {
 
      return publishArray;
 }
-    console.log(props);
     return(
         <div className='checkout-background'>
             <div>

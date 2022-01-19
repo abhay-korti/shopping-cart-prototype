@@ -437,6 +437,12 @@ li.popupcart-parent:hover {
   justify-content: center;
 }
 
+.checkout-listitem-splice {
+  color: red;
+  font-size: 10px;
+  text-align: center;
+}
+
 .home-background {
   display: flex;
   flex-flow: column nowrap;

@@ -1,12 +1,9 @@
 import React, {useState} from 'react'
-import {Outlet, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import smallDatabase from '../Utilities/ShopDatabase';
 import {cartQuantity} from '../Utilities/CartFunctions';
 
 const Shop = (props) => {
-
-    console.log(props);
-
     const allData = smallDatabase();
     const [activeCategory, setActiveCategory] = useState('all');
 
