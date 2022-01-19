@@ -50,7 +50,7 @@ const cartQuantity = (currentCart, product, addingFunc, dellingFunc) => {
                     return(
                         <div className="quantity-container">
                             <button onClick={() => dellingFunc(product.itemId)} className="quantity-holder-buttons">-</button>
-                            <span className="quantity-holder-number">{currentCart.cart[i].quantity}</span>
+                            <span className="quantity-holder-display">{currentCart.cart[i].quantity}</span>
                             <button onClick={() => addingFunc(product)} className="quantity-holder-buttons">+</button>  
                         </div>
                     )
@@ -65,7 +65,7 @@ const cartQuantity = (currentCart, product, addingFunc, dellingFunc) => {
        )
 }
 
-const removeFromCart = (currentState,itemId) => {
+const remFunc = (currentState,itemId) => {
     let copyArr = currentState.cart;
     for(let i=0;i<copyArr.length;i++){
       if(copyArr[i].product.itemId == itemId){
@@ -82,7 +82,7 @@ const removeFromCart = (currentState,itemId) => {
 
 
 export {
-    removeFromCart,
+    remFunc,
     cartQuantity,
     addFunc,
     delFunc

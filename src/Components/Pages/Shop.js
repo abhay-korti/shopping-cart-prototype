@@ -42,14 +42,14 @@ const Shop = (props) => {
                     if(activeCategory=='all' || activeCategory == element.category){
                     return(
                         <div key={element.itemId} className='shop-itemcontainer'>
-                            <div>
-                                <img src={element.img_source_one} alt={element.name} className='shop-imagecontainer'></img>
+                            <div className='shop-imagecontainer'>
+                                <img src={element.img_source_one} alt={element.name} className='shop-image'></img>
                             </div>
                             <div>
                                 <Link to={`/shop/${element.itemId}`}>{element.name}</Link>
                             </div>
                             <div>
-                                {element.price}
+                                {`$${element.price}`}
                             </div>
                             <div className='quantity-holder-display'>
                                 {

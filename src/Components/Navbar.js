@@ -29,8 +29,11 @@ const Navbar = (props) => {
                             }
                         </div>
                     </div>
-                    <div  key={uuid()}>
-                        <strong>{item.product.name}</strong>
+                    <div  key={uuid()} className='popupcart-listitem-namecontainer'>
+                        <div className="popupcart-listitem-name">{item.product.name}</div>
+                        <div className='popupcart-listitem-splice' onClick={() => {
+                            props.remFromCart(item.product.itemId);
+                        }}>Remove from Cart</div>
                     </div>
                     <div key={uuid()} className='popup-buttoncontainer'>
                         <button className='popupcart-buttons' onClick={() => props.addToCart(item.product)}>+</button>
