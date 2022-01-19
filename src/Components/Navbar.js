@@ -7,7 +7,9 @@ const Navbar = (props) => {
 
     const [popupDisplayStatus,setPopUpDisplayStatus] = useState(false);
     const popupRef = useRef();
+
     const triangleRef = useRef();
+
     const getQuantity = () => {
         let quant=0;
         if(props.cart.length >0){

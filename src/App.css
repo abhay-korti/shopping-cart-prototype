@@ -277,6 +277,10 @@ li.popupcart-parent:hover {
   font-size: 24px;
 }
 
+.quantity-holder-cart:hover {
+  cursor: pointer;
+}
+
 .shop-totalcontainer {
   display: flex;
   flex-flow: row nowrap;
